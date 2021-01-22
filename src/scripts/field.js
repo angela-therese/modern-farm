@@ -1,11 +1,17 @@
-let allPlantsInField = []
+let plantsInField = [];
 
 
 //pushes the seedObject plant into the array we created above
 export const addPlant = (seedObject) => {
+    if(Array.isArray(seedObject)){
+        for(const item of seedObject){
+            plantsInField.push(item)
+        } 
     
-   
-    allPlantsInField.push(seedObject)
+    } else {
+        plantsInField.push(seedObject)
+    }
+    
 
 
 }
@@ -13,7 +19,7 @@ export const addPlant = (seedObject) => {
 //returns the most recent version of the array to which we are pushing seeds above
 export const usePlants = () => {
 
-    return allPlantsInField
+    return plantsInField.slice()
 
 }
 
