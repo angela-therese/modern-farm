@@ -1,7 +1,6 @@
-let plantsInField = [];
+const plantsInField = []; //stores all the plants growing in the field; those plants are generated from the yearly plan file 
 
 
-//pushes the seedObject plant into the array we created above
 export const addPlant = (seedObject) => {
     if(Array.isArray(seedObject)){
         for(const item of seedObject){
